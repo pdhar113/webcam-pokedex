@@ -1,0 +1,6 @@
+path: labelled data
+train: images
+val: images
+
+nc: 6
+names: [Abra, Aerodactyl, Alakazam, Arbok, Arcanine, Articuno]
