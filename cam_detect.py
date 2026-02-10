@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import cv2
 
-model = YOLO("runs/detect/pokemon_detection_runs/yolov8m_pokemon4/weights/best.pt")
+model = YOLO("runs/detect/pokemon_detection_runs/yolo11s_pokemon/weights/best.pt")
 cap = cv2.VideoCapture(1)
 
 print("Pokemon Detection Started - Press 'q' to quit")
@@ -11,6 +11,7 @@ while True:
     if not ret:
         break
 
+    frame = cv2.flip(frame, 1)  # Horizontal flip (mirror)
     results = model(frame, conf=0.75, verbose=False)
     annotated_frame = results[0].plot()
 

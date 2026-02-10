@@ -1,6 +1,16 @@
-path: labelled data
-train: images
-val: images
-
-nc: 6
-names: [Abra, Aerodactyl, Alakazam, Arbok, Arcanine, Articuno]
+path: C:\Users\prith\OneDrive\Desktop\test fold\data
+train: train/images
+val: validation/images
+nc: 11
+names:
+- Abra
+- Aerodactyl
+- Alakazam
+- Arbok
+- Arcanine
+- Articuno
+- Beedrill
+- Bellsprout
+- Blastoise
+- Bulbasaur
+- Butterfree
