@@ -2,8 +2,8 @@
 
 Real-time Pokemon detection using YOLO11s trained on a custom dataset.
 
-## Classes Detected
-Abra, Aerodactyl, Alakazam, Arbok, Arcanine, Articuno, Beedrill, Bellsprout, Blastoise, Bulbasaur, Butterfree
+## Classes Detected (17)
+Abra, Aerodactyl, Alakazam, Arbok, Arcanine, Articuno, Beedrill, Bellsprout, Blastoise, Bulbasaur, Butterfree, Evee, Electabuzz, Flareon, Dragonite, Gastly, Charizard
 
 ## Setup
 
@@ -16,18 +16,26 @@ pip install ultralytics opencv-python pyyaml
 Run scripts in order:
 
 ```bash
-# 1. Split data into train/validation (80/20)
+
+# 2. Split data into train/validation (80/20)
 python train_val_split.py
 
-# 2. Generate YOLO config file
+# 3. Generate YOLO config file
 python yaml_config.py
 
-# 3. Train the model
+# 4. Train the model
 python train_model.py
 
-# 4. Run live detection
+# 5. Run live detection
 python cam_detect.py
 ```
+
+## Adding New Pokemon
+
+1. Add labeled images to `small-pokemon-data/images/` and `small-pokemon-data/labels/`
+2. Update `small-pokemon-data/classes.txt` with new class names
+3. Update `fix_labels.py` with new Pokemon name patterns
+4. Run the full pipeline starting from step 1
 
 ## Project Structure
 ```
@@ -47,7 +55,7 @@ python cam_detect.py
 ```
 
 ## Training Config
-- Model: YOLO11s
+- Model: YOLO11s (or fine-tuned from previous checkpoint)
 - Epochs: 40
 - Image size: 480x480
 - Train/Val split: 80/20

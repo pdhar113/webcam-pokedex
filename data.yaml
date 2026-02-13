@@ -1,7 +1,7 @@
-path: C:\Users\prith\OneDrive\Desktop\test fold\data
+path: C:\code files\pokedex\data
 train: train/images
 val: validation/images
-nc: 11
+nc: 17
 names:
 - Abra
 - Aerodactyl
@@ -14,3 +14,9 @@ names:
 - Blastoise
 - Bulbasaur
 - Butterfree
+- Evee
+- Electabuzz
+- Flareon
+- Dragonite
+- Gastly
+- Charizard

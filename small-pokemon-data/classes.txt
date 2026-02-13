@@ -9,3 +9,9 @@ Bellsprout
 Blastoise
 Bulbasaur
 Butterfree
+Evee
+Electabuzz
+Flareon
+Dragonite
+Gastly
+Charizard
